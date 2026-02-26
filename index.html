@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sliker.io - Neon Slither Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- UI HUD -->
+    <div id="ui-layer">
+      <div id="leaderboard" class="glass-panel">
+        <h3>Leaderboard</h3>
+        <ul id="leaderboard-list">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+
+      <div id="score-panel" class="glass-panel">
+        <div class="score-label">Length</div>
+        <div id="current-score">10</div>
+      </div>
+
+      <div id="minimap-container" class="glass-panel">
+        <canvas id="minimap-canvas"></canvas>
+      </div>
+    </div>
+
+    <!-- Start/Game Over Overlay -->
+    <div id="overlay" class="visible">
+      <div class="overlay-content glass-panel">
+        <h1>SLIKER.IO</h1>
+        <p>The Ultimate Neon Slither Experience</p>
+        <div class="input-group">
+          <input type="text" id="player-name" placeholder="Enter Nickname" maxlength="15">
+          <button id="start-btn">PLAY</button>
+        </div>
+        <div class="controls-hint">
+          Move mouse to steer • Click/Hold to boost
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
