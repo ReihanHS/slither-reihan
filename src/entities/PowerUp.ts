@@ -1,13 +1,15 @@
 import type { Vector } from '../utils/MathUtils';
 
-export enum PowerUpType {
-    SPEED_BURST = '⚡',
-    MAGNET = '🧲',
-    GHOST = '👻',
-    MASS_BOMB = '💣',
-    SHIELD = '🛡',
-    GROWTH_SURGE = '🧬'
-}
+export const PowerUpType = {
+    SPEED_BURST: '⚡',
+    MAGNET: '🧲',
+    GHOST: '👻',
+    MASS_BOMB: '💣',
+    SHIELD: '🛡',
+    GROWTH_SURGE: '🧬'
+} as const;
+
+export type PowerUpType = (typeof PowerUpType)[keyof typeof PowerUpType];
 
 export class PowerUp {
     pos: Vector;
