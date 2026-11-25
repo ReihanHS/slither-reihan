@@ -4,6 +4,8 @@ A neon slither-style snake game for the browser. Eat food to grow, grab power-up
 
 **Play it:** https://reihanhs.github.io/slither-reihan/
 
+![Screenshot of Sliker.io](docs/screenshot.webp)
+
 ## Controls
 
 - Move the mouse to steer.
